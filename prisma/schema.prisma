@@ -25,3 +25,9 @@ model MataKuliah {
   ruangan        String
   dosenPengampu  String
 }
+
+model SmartGarden {
+  id         Int @id @default(autoincrement())
+  suhu       Int
+  kelembaban Int
+}
