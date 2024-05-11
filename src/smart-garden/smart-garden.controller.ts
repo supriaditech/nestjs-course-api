@@ -13,4 +13,16 @@ export class SmartGardenController {
   ) {
     return await this.smartGardenService.createDataSmartGarden(smartGardenDto);
   }
+
+  @Post('/smart-garden-all')
+  @HttpCode(HttpStatus.OK)
+  async findAllSmartGardenController() {
+    return this.smartGardenService.getSmartGardenAll();
+  }
+
+  @Post('/smart-garden-by-date')
+  @HttpCode(HttpStatus.OK)
+  async findByDateSmartGardenController() {
+    return this.smartGardenService.getSmartGardenByDate();
+  }
 }

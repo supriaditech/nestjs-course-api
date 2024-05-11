@@ -27,7 +27,9 @@ model MataKuliah {
 }
 
 model SmartGarden {
-  id         Int @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   suhu       Int
   kelembaban Int
+  createdAt  DateTime @default(now()) // Menambahkan timestamp ketika record dibuat
+  updatedAt  DateTime @updatedAt
 }
